@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"npx tailwindcss -i ./static/tailwind/input.css -o ./static/css/twstyle.css --watch"
+    "dev":"npx tailwindcss/cli -i ../static/tailwind/input.css -o ./css/z8932sde8423.css --watch"
 
   },
   "keywords": [],
