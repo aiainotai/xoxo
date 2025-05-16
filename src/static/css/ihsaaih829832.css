@@ -12091,247 +12091,106 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: 0;
 }
 
-/* Main navigation */
-.site-nav-inner {
-  position: relative;
+.mega-menu {
+  width: 100%;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  display: block !important; /* Always keep it in DOM */
 }
 
-.main-nav {
-  min-height: 70px;
-  margin-bottom: 10px;
-}
-
-.navbar {
-  border-radius: 0;
-  border: 0;
-  margin-bottom: 0;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-.navbar-toggler {
-  color: #fff;
-  padding: 8px 15px;
-  background: #e74907;
-  position: absolute;
-  top: -55px;
-  z-index: 9;
-}
-.navbar-toggler-icon {
-  width: 25px;
-}
-
-.navbar-toggle .i-bar {
-  background: #fff;
-}
-
-.navbar-collapse {
-  padding-left: 0;
-}
-
-ul.navbar-nav > li {
-  float: left;
-  padding: 0;
-  position: relative;
-}
-ul.navbar-nav > li > a {
-  padding: 0 0px;
-  line-height: 50px;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0;
-  position: relative;
-  transition: 350ms;
-  padding: 10px 15px;
-}
-ul.navbar-nav > li > a i {
-  font-weight: 700;
-}
-ul.navbar-nav > li > a:hover, ul.navbar-nav > li > a:focus {
-  background: none;
-}
-ul.navbar-nav > li:hover a::before, ul.navbar-nav > li.active a::before {
-  border-color: #f4f4f4;
+.nav-item:hover .mega-menu {
   opacity: 1;
-  transform: scale(1) translateZ(0);
+  visibility: visible;
+  transform: translateY(0);
 }
 
-.nav .open > a,
-.nav .open > a:hover,
-.nav .open > a:focus {
-  background: transparent;
-  border: 0;
+.vertical-tabs {
+  display: flex;
+  min-height: 400px;
 }
 
-/* Dropdown */
-ul.navbar-nav > li.mega-dropdown {
-  position: static;
+.nav-vertical {
+  flex: 0 0 200px;
 }
 
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu > .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -2px;
-  border-radius: 0;
-}
-
-.dropdown-submenu > a:after {
-  display: block;
-  content: "\f105";
-  font-family: FontAwesome;
-  float: right;
-  margin-top: 3px;
-  margin-right: -5px;
-}
-
-.dropdown-submenu:hover > a:after {
-  border-left-color: #fff;
-}
-
-.dropdown-submenu.pull-left {
-  float: none;
-}
-
-.dropdown-submenu.pull-left > .dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-
-.dropdown-toggle::after {
-  display: none;
-}
-
-.dropdown-menu {
+.nav-vertical .nav-link {
   text-align: left;
-  background: #fff;
-  z-index: 100;
-  min-width: 230px;
-  border-radius: 0;
-  border: 0;
-  border: 0;
-  box-shadow: 0px 3px 3px 2px rgba(0, 0, 0, 0.15);
-  margin-top: 0;
-  padding: 0;
+  margin-bottom: 0.5rem;
+  color: #333;
+  border: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
-.navbar-nav > li > .dropdown-menu {
-  border-top: 1px solid #dedede;
+.nav-vertical .nav-link:hover,
+.nav-vertical .nav-link.active {
+  background-color: #bb1669;
+  color: #0d6efd;
+  border-left: 3px solid #0d6efd;
 }
 
-.navbar-nav > li > .dropdown-menu.mega-menu-content {
-  border-top: 0;
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.dropdown-menu-large {
-  min-width: 400px;
+.tab-content.active {
+  display: block;
+  opacity: 1;
 }
 
-.dropdown-menu-large > li > ul {
-  padding: 0;
-  margin: 0;
+.submenu-column {
+  -moz-column-count: 3;
+       column-count: 3;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.submenu-list {
   list-style: none;
-}
-
-.dropdown-menu-large > li > ul > li > a {
   padding-left: 0;
 }
 
-.dropdown-menu-large > li > ul > li.active > a {
-  color: #833AB4;
-}
-
-.navbar-nav > li > .dropdown-menu > a {
-  background: none;
-}
-
-.dropdown-menu li a {
-  display: block;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: normal;
+.submenu-list a {
   text-decoration: none;
-  padding: 15px 25px 15px 25px;
-  border-bottom: 1px solid #e5e5e5;
-  color: #333333;
-  background: #f4f4f4;
-  text-transform: uppercase;
+  color: #333;
+  padding: 0.25rem 0;
+  display: block;
+  transition: all 0.2s ease;
 }
 
-.dropdown-menu li:last-child > a {
-  border-bottom: 0;
+.nav-link {
+  font-size: 1.1rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+  color: black;
 }
 
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus,
-.dropdown-menu > .active > .dropdown-menu > .active > a {
-  background: none;
-  color: #727272;
+.submenu-list a:hover {
+  color: #0d6efd;
+  transform: translateX(10px);
 }
 
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-  background: #727272;
-  color: #fff;
-}
-
-@media (min-width: 767px) {
-  ul.nav li.dropdown .dropdown-menu li.dropdown-submenu .dropdown-menu {
-    left: 100%;
-    top: 0;
-    display: none;
+@media (max-width: 768px) {
+  .vertical-tabs {
+    flex-direction: column;
   }
-  ul.nav li.dropdown .dropdown-menu li.dropdown-submenu:hover .dropdown-menu {
-    display: block;
+  .nav-vertical {
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
   }
-}
-.mega-menu-content {
-  width: 1110px;
-  padding: 0;
-}
-
-.mega-menu-content-inner {
-  padding: 20px 10px;
-}
-.mega-menu-content .row {
-  margin: 0;
-}
-
-/*-- Dark bg style --*/
-.main-nav.dark-bg > .container > .row {
-  border: 0;
-  background: #272727;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.dark-bg .navbar-toggler {
-  margin-left: 6px;
-}
-
-.main-nav.dark-bg ul.navbar-nav > li > a {
-  color: #fff;
-}
-
-.main-nav.dark-bg ul.navbar-nav > li > a:before {
-  border: 0;
-}
-
-.main-nav.dark-bg ul.navbar-nav > li.active,
-.main-nav.dark-bg ul.navbar-nav > li:hover {
-  background: #e74907;
-}
-
-.main-nav.dark-bg .nav-search i {
-  color: #fff;
-}
-
-.main-nav {
-  position: relative;
-  padding: 0 0px;
+  .submenu-column {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
 }/*# sourceMappingURL=ihsaaih829832.css.map */
