@@ -4,10 +4,12 @@ from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
 from ooxx import views as frnview
+from xadmin import views as bendview
 
 urlpatterns = [
   
     path('admin/', admin.site.urls),
+    path('xadmin', bendview.admindash, name="xadmin" ),
     path('', frnview.index, name='index'),
 ]
 
